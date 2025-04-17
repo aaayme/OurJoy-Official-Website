@@ -1,0 +1,149 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #090624;
+    color: #ffffff;
+    font-family: 'Segoe UI', Calibri, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Header Top Section */
+#topHeader {
+    background-color: #d8790d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    animation: slideInTop 0.7s ease-out forwards;
+}
+
+#topHeader img {
+    height: 80px;
+    max-width: 100%;
+}
+
+/* Slide-in Effect for Top Header */
+@keyframes slideInTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header Bottom Navigation */
+#bottomHeader {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 0.8em 0;
+    animation: slideInBottom 0.7s ease-out forwards;
+}
+
+#bottomHeader label {
+    font-size: 1.1em;
+    cursor: pointer;
+    position: relative;
+    padding: 0.3em 0.5em;
+    transition: color 0.3s;
+}
+
+#bottomHeader label::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: #d8790d;
+    transition: transform 0.3s ease;
+}
+
+#bottomHeader label:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Slide-in Effect for Bottom Header */
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Text Box Styling */
+.textBox {
+    max-width: 1000px;
+    margin: 2em auto;
+    border-radius: 1em;
+    background-color: #223a83;
+    padding: 2em;
+    font-size: 1.2em;
+    line-height: 1.8;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    opacity: 0;
+    animation: fadeInTextBox 1s 0.5s forwards;
+}
+
+/* Fade-in for Text Boxes */
+@keyframes fadeInTextBox {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Arabic Text Support */
+.arabic {
+    text-align: right;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #bottomHeader {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .textBox {
+        margin: 1.5em 1em;
+        padding: 1.5em;
+    }
+
+    #topHeader img {
+        height: 60px;
+    }
+}
