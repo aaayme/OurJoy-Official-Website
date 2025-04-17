@@ -7,39 +7,130 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
+<main>
+
+    <div class="toggle-div">
+        <button class="toggle-btn" onclick="toggleView()">Switch to Detailed View</button>
+    </div>
+
+<!-- Card View -->
+<section class="monster-section" id="card-view">
+    <div class="monster-cards">
+
+        <div class="monster-card common">
+            <h2>💀 The Skull</h2>
+            <p>A big walking skull. Throws smaller skulls to spy on players.</p>
+        </div>
+
+        <div class="monster-card common">
+            <h2>🧟 Zombies</h2>
+            <p>Failed experiment victims. Slow and weak but appear in large numbers.</p>
+        </div>
+
+        <div class="monster-card common">
+            <h2>👁️ The Eye</h2>
+            <p>A floating eye. Don’t look at it.</p>
+        </div>
+
+        <div class="monster-card elite">
+            <h2>🕷️ Corpseweaver</h2>
+            <p>Spider-like and fast. Made of corpses. Weak to fire.</p>
+        </div>
+
+        <div class="monster-card boss">
+            <h2>🧪 Doctor Herbert</h2>
+            <p>Controls other monsters. Thinks you're just an escaped experiment.</p>
+        </div>
+
+        <div class="monster-card boss">
+            <h2>🪓 The Grafted</h2>
+            <p>Corpse fusion with a magical axe. Weak to fire, very strong.</p>
+        </div>
+
+        <div class="monster-card boss">
+            <h2>🛡️ Ferrous, The Legendary Knight</h2>
+            <p>Undead knight with unbreakable armor—except for one weak spot.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Detailed View -->
+<section class="monster-section hidden" id="detailed-view">
     <div class="textBox">
-        <h2 style="margin-bottom: 0.5em;">The Skull</h2>
+        <h2>💀 The Skull</h2>
         <p>
-            A powerful monster — he is a big, walking skull 💀. He can throw smaller skulls that act like cameras to track players.
-            When you see one, <strong>break it immediately</strong> using any available tool and hide! If you don’t,
-            he will track and find you. Once you break a skull, he will come to check the area, so stay hidden!
+            A powerful monster — a big, walking skull 💀. Throws smaller skulls that act like cameras. Break them fast and hide, or he'll track you.
+            After destruction, he checks the area—stay hidden!
         </p>
     </div>
 
     <div class="textBox">
-        <h2 style="margin-bottom: 0.5em;">Gooler 👻</h2>
+        <h2>👻 Gooler</h2>
         <p>
-            A shadowy, black ghost that only appears in dark rooms devoid of any light. Gooler attempts to possess your body, dealing significant damage if successful. He is <strong> extremely sensitive </strong> to light—if you sense his presence nearby, immediately light up the room before he enters your body.
-        </p>
-    </div>
-    <div class="textBox">
-        <h2 style="margin-bottom: 0.5em;">The Grafted 🪓</h2>
-        <p>
-            A horrifying fusion of corpses dragged from graveyards, stitched together by dark magic bound to a cursed axe. This abomination wields multiple melee weapons with its many arms, while one massive hand grips the magical axe that gave it life. The Grafted is extremely powerful and cannot be taken down without enhancements or boosts. However, it has a known weakness—<b>fire</b>. Stay alert; its attacks are brutal, fast, and unpredictable.
+            A shadowy ghost appearing in pitch-black rooms. Tries to possess you, causing major damage. <strong>Extremely sensitive to light</strong>—light up the room to ward it off.
         </p>
     </div>
 
     <div class="textBox">
-        <h2 style="margin-bottom: 0.5em;"> Corpseweaver 🕷️</h2>
+        <h2>🪓 The Grafted</h2>
         <p>
-            A grotesque spider-shaped abomination, formed from a tangled mass of rotting corpses. The Corpseweaver skitters unnaturally fast, relentlessly chasing down its prey. It’s incredibly deadly—if it reaches you, there’s no escape. Fire is its only known weakness, so light it up before it gets too close.
+            A fusion of corpses wielding a cursed axe. Multiple arms, brutal melee attacks. Weak to <strong>fire</strong>. Requires boosts to defeat.
         </p>
     </div>
 
+    <div class="textBox">
+        <h2>🕷️ Corpseweaver</h2>
+        <p>
+            A spider made of bodies. Incredibly fast and deadly. If it reaches you—game over. Fire is your only hope.
+        </p>
+    </div>
 
+    <div class="textBox">
+        <h2>🧟 Zombies</h2>
+        <p>
+            Failed experiments. Slow, weak, and plentiful. Easy to kill alone—but deadly in numbers.
+        </p>
+    </div>
 
+    <div class="textBox">
+        <h2>🛡️ Ferrous: The Legendary Knight</h2>
+        <p>
+            A cursed knight, soul overtaken by a Gooler. Nearly invincible—only his back-mounted sword can be struck. Hard to reach, but your only chance.
+        </p>
+    </div>
 
+    <div class="textBox">
+        <h2>🧪 Doctor Herbert</h2>
+        <p>
+            The mad surgeon behind your operation. Leads the monsters. Believes you’re an experiment gone rogue—and wants to fix that.
+        </p>
+    </div>
 
+    <div class="textBox">
+        <h2>👁️ The Eye</h2>
+        <p>
+            A drifting eye. Doesn't attack—just stares. But don’t look back. No one who did was ever the same.
+        </p>
+    </div>
 
+</section>
+
+<script>
+    const cardView = document.getElementById("card-view");
+    const detailedView = document.getElementById("detailed-view");
+    const toggleBtn = document.querySelector(".toggle-btn");
+
+    function toggleView() {
+        const cardVisible = !cardView.classList.contains("hidden");
+
+        cardView.classList.toggle("hidden", cardVisible);
+        detailedView.classList.toggle("hidden", !cardVisible);
+
+        toggleBtn.textContent = cardVisible ? "Switch to Card View" : "Switch to Detailed View";
+    }
+</script>
+</main>
 </body>
 </html>

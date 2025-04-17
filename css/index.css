@@ -137,6 +137,11 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    #topHeader img{
+        height: 140px;
+    }
+
     #bottomHeader {
         flex-direction: column;
         align-items: center;
@@ -151,4 +156,77 @@ body {
     #topHeader img {
         height: 60px;
     }
+}
+
+.monster-card {
+    border-radius: 1em;
+    padding: 1em 1.5em;
+    margin: 1em auto;
+    max-width: 700px;
+    color: white;
+    font-family: Calibri, sans-serif;
+    background-color: #1e1e2e;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.monster-card:hover {
+    transform: scale(1.02);
+}
+
+/* Categories */
+.common {
+    border-left: 8px solid #19bf21;
+}
+
+.elite {
+    border-left: 8px solid #ffcc00;
+}
+
+.boss {
+    border-left: 8px solid #ff4d4d;
+}
+
+.monster-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.3em;
+}
+
+.monster-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.toggle-btn {
+    margin: 1em auto;
+
+    padding: 0.5em 1em;
+    width: 40%;
+    cursor: pointer;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.toggle-div{
+    margin: 1em auto;
+
+    padding: 0.5em 1em;
+    width: 40%;
+    cursor: pointer;
+
+}
+
+.monster-section {
+    margin: 2em 0;
+}
+
+.textBox h2 {
+    margin-bottom: 0.3em;
+}
+
+.hidden {
+    display: none;
 }
