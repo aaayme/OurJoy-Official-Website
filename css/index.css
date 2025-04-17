@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
 body {
     background-color: #090624;
     color: #ffffff;

@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="media/OurJoy.png" alt="OurJoy">
             </div>
             <div id="bottomHeader">
-                <label>Home</label>
+                <label> <a href="index.html">Home</a></label>
                 <label>Story</label>
-                <label>Monsters</label>
+                <label>  <a href="monsters.html">Monsters </a></label>
             </div>
         </header>
     `;
