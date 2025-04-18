@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <div id="bottomHeader">
                 <label> <a href="index.html">Home</a></label>
                 <label>Story</label>
+                <label><a href="details.html">Details</a></label>
                 <label>  <a href="monsters.html">Monsters </a></label>
+                <label>Logs</label>
             </div>
         </header>
     `;
