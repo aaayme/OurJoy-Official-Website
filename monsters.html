@@ -5,17 +5,24 @@
     <title>Monsters</title>
     <script src="js/header.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/search.js"></script>
+
 </head>
 <body>
 
 <main>
+    <div class="searchBox">
+        <label>
+            <input type="text" placeholder="Search" onkeyup="search(this.value)">
+        </label>
+    </div>
 
-    <div class="toggle-div">
+    <div class="toggle-div hidden">
         <button class="toggle-btn" onclick="toggleView()">Switch to Detailed View</button>
     </div>
 
 <!-- Card View -->
-<section class="monster-section" id="card-view">
+<section class="monster-section hidden" id="card-view">
     <div class="monster-cards">
 
         <div class="monster-card common">
@@ -57,7 +64,7 @@
 </section>
 
 <!-- Detailed View -->
-<section class="monster-section hidden" id="detailed-view">
+<section class="monster-section" id="detailed-view">
     <div class="textBox">
         <h2>💀 The Skull</h2>
         <p>
